@@ -6,22 +6,23 @@ const askTime = document.getElementById("ask-time")
 
 askButton.addEventListener("click", function () {
    askTime.textContent = "new button clicked"
-    // let data = {
-    //     Name: name.value,
-    //     Time: new Date().toLocaleString("en-IE"),
-    // };
-    // fetch("/get_time", {
-    //     headers: {
-    //         'Accept': 'application/json',
-    //         'Content-Type': 'application/json'
-    //     },
-    //     method: "GET",
-    // }).then((response) => {
-    //     response.text().then(function (data) {
-    //         let result = JSON.parse(data);
-    //         console.log(result)
-    //     });
-    // }).catch((error) => {
-    //     console.log(error)
-    // });
+   let data = {
+      username: name.value,
+   //   PublicKey: new Date().toLocaleString("en-IE"),
+     };
+   fetch("post", {
+      headers: {
+         'Accept': 'application/json',
+         'Content-Type': 'application/json'
+      },
+      method: "POST",
+      body: JSON.stringify(data)
+   }).then((response) => {
+      response.text().then(function (data) {
+         let result = JSON.parse(data);
+         console.log(result)
+      });
+   }).catch((error) => {
+      console.log(error)
+   });
 })
