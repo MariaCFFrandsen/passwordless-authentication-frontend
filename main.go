@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"github.com/julienschmidt/httprouter"
-	"github.com/julienschmidt/sse"
 	"github.com/kardianos/service"
 	"net/http"
 	"os"
@@ -45,15 +44,11 @@ func (p program) Stop(s service.Service) error {
 
 func (p program) run() {
 	router := httprouter.New()
-	timer := sse.New()
 	router.ServeFiles("/js/*filepath", http.Dir("frontend_components"))
 	router.ServeFiles("/css/*filepath", http.Dir("frontend_components"))
-	//router.GET("/", getPing)
+	router.GET("/ping", getPing)
 
 	router.POST("/create-user", post)
-
-	router.Handler("GET", "/time", timer)
-	//go streamTime(timer)
 	err := http.ListenAndServe(":82", router)
 	if err != nil {
 		fmt.Println("Problem starting web server: " + err.Error())

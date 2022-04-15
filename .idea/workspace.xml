@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86fca4df-bb6e-4a0e-b519-b4dc980964d5" name="Changes" comment="added frontend test html, css and js files.">
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homepage.go" afterDir="false" />
+    <list default="true" id="86fca4df-bb6e-4a0e-b519-b4dc980964d5" name="Changes" comment="connected api endpoints to frontend. Changed mock up frontend to frontend with possibility to create user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authenticator/frontend_components/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/authenticator/frontend_components/homepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authenticator/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend_components/homepage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend_components/homepage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend_components/homepage.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +136,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added frontend test html, css and js files." />
-    <option name="LAST_COMMIT_MESSAGE" value="added frontend test html, css and js files." />
+    <MESSAGE value="connected api endpoints to frontend. Changed mock up frontend to frontend with possibility to create user" />
+    <option name="LAST_COMMIT_MESSAGE" value="connected api endpoints to frontend. Changed mock up frontend to frontend with possibility to create user" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

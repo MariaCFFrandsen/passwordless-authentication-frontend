@@ -1,5 +1,3 @@
-const testButton = document.getElementById("test-button")
-const buttonTime = document.getElementById("button-time")
 const name = document.getElementById("name")
 const askButton = document.getElementById("ask-button")
 const askTime = document.getElementById("ask-time")
@@ -8,9 +6,8 @@ askButton.addEventListener("click", function () {
    askTime.textContent = "new button clicked"
    let data = {
       username: name.value,
-   //   PublicKey: new Date().toLocaleString("en-IE"),
-     };
-   fetch("post", {
+   };
+   fetch("/post", {
       headers: {
          'Accept': 'application/json',
          'Content-Type': 'application/json'
